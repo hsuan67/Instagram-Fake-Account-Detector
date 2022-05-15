@@ -25,10 +25,11 @@
 
 ## Features
 
-選擇不論帳號公開與否皆可取得之公開資訊:
+選擇不論帳號公開與否皆可取得之公開資訊：
+
 <img src="https://i.imgur.com/SHae8rJ.jpg" width="250" height="150" alt="Features"/><br/>
 
-以下為模型採用的 10 個特徵:
+以下為模型採用的 10 個特徵：
 
 * **Profile Picture**: User has profile picture or not.
 
