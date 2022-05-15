@@ -1,6 +1,7 @@
 # Instagram-Fake-Account-Detector
 
 本專題製作一個能幫助判別 IG 假帳號的系統：使用者輸入目標的 IG 帳號 ID，程式將判斷此帳號是真帳號，或是騷擾、色情帳號…等假帳號。
+
 以下為系統網址：https://python-alison.herokuapp.com/
 
 此程式分為三個部分：
