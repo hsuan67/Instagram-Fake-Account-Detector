@@ -93,6 +93,6 @@ Ying Hsuan Chen 陳映璇
 
 I Chieh Yang 楊沂潔
 
-# References
+# Reference
 
 https://www.kaggle.com/code/khoingo16/predicting-a-fake-instagram-account/notebook
