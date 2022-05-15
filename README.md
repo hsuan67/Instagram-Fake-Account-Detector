@@ -63,11 +63,13 @@
 
 ## result
 
-<img src="https://i.imgur.com/DStPPG1.png" width="180" height="150" alt="Model"/><br/>
-
 accuracy: 0.933333
+
 precision: 0.933333
+
 recall: 0.933333
+
+<img src="https://i.imgur.com/DStPPG1.png" width="180" height="150" alt="Model"/><br/>
 
 # 爬蟲獲取資料
 instaloader 抓取目標帳號的資料，作為系統判斷的feature
