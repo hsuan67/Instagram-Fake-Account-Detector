@@ -25,7 +25,7 @@
 
 ## Features
 
-<img src="https://i.imgur.com/SHae8rJ.jpg" width="300" height="150" alt="Features"/><br/>
+<img src="https://i.imgur.com/SHae8rJ.jpg" width="250" height="150" alt="Features"/><br/>
 
 選擇不論帳號公開與否皆可取得之公開資訊。
 
