@@ -1,0 +1,10 @@
+Flask
+gunicorn
+instaloader
+pandas
+numpy
+scipy
+sklearn
+matplotlib
+seaborn
+joblib
