@@ -19,3 +19,24 @@
 * instaloader
 * flask
 * gunicorn
+
+# 機器學習模型
+## features
+## training
+* cross validation
+* random search
+## result
+
+# 爬蟲獲取資料
+instaloader 抓取目標帳號的資料，作為系統判斷的feature
+
+## 使用者介面
+### 初始畫面
+
+### 判斷結果呈現
+
+# Authors
+Ying Hsuan Chen 陳映璇
+I Chieh Yang 楊沂潔
+
+## References
