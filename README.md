@@ -25,7 +25,7 @@
 
 ## Features
 
-![image](https://user-images.githubusercontent.com/86561823/168461502-7e647720-25b5-4a93-977f-14762c3ee026.png =500x)
+![image](https://user-images.githubusercontent.com/86561823/168461585-6e59a3f1-2e66-410b-b53d-e5a14f870ee0.png =500x)
 
 選擇不論帳號公開與否皆可取得之公開資訊。
 
