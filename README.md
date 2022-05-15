@@ -29,15 +29,25 @@
 
 選擇不論帳號公開與否皆可取得之公開資訊。
 
-* Username
-* Fullname
-* Biography word numbers
-* Post numbers
-* Follower numbers
-* Followee numbers
-* Have profile picture or not
-* Have URL or not
-* Private or not
+* Profile Picture: User has profile picture or not.
+
+* Num/Length (Username): Ratio of number of numerical characters in username to its length.
+
+* Num/Length (Fullname): Ratio of number of numerical characters in fullname to its length.
+
+* Fullname words: How many words are in the fullname?
+
+* Description Length: How many characters are in the biography?
+
+* External URL: User has external URL or not.
+
+* Private or not: User is private or not.
+
+* Number of Posts: How many posts does the user have?
+
+* Number of Followers: How many followers does the user have?
+
+* Number of Followees: How many followees does the user have?
 
 ## Training
 
