@@ -25,29 +25,30 @@
 
 ## Features
 
+選擇不論帳號公開與否皆可取得之公開資訊:
 <img src="https://i.imgur.com/SHae8rJ.jpg" width="250" height="150" alt="Features"/><br/>
 
-選擇不論帳號公開與否皆可取得之公開資訊。
+以下為模型採用的 10 個特徵:
 
-* Profile Picture: User has profile picture or not.
+* **Profile Picture**: User has profile picture or not.
 
-* Num/Length (Username): Ratio of number of numerical characters in username to its length.
+* **Num/Length (Username)**: Ratio of number of numerical characters in username to its length.
 
-* Num/Length (Fullname): Ratio of number of numerical characters in fullname to its length.
+* **Num/Length (Fullname)**: Ratio of number of numerical characters in fullname to its length.
 
-* Fullname words: How many words are in the fullname?
+* **Fullname words**: How many words are in the fullname?
 
-* Description Length: How many characters are in the biography?
+* **Description Length**: How many characters are in the biography?
 
-* External URL: User has external URL or not.
+* **External URL**: User has external URL or not.
 
-* Private or not: User is private or not.
+* **Private or not**: User is private or not.
 
-* Number of Posts: How many posts does the user have?
+* **Number of Posts**: How many posts does the user have?
 
-* Number of Followers: How many followers does the user have?
+* **Number of Followers**: How many followers does the user have?
 
-* Number of Followees: How many followees does the user have?
+* **Number of Followees**: How many followees does the user have?
 
 ## Training
 
