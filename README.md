@@ -69,19 +69,30 @@ precision: 0.933333
 
 recall: 0.933333
 
-<img src="https://i.imgur.com/DStPPG1.png" width="180" height="150" alt="Model"/><br/>
+<img src="https://i.imgur.com/DStPPG1.png" width="300" height="250" alt="Result"/><br/>
 
 # 爬蟲獲取資料
-instaloader 抓取目標帳號的資料，作為系統判斷的feature
 
-## 使用者介面
-### 初始畫面
+Instaloader 爬取模型所需之特徵（欲查詢帳號的資訊），交由模型預測。
 
-### 判斷結果呈現
+# 使用者介面
+
+## 初始畫面
+
+<img src="https://i.imgur.com/iICVKNj.png" width="270" height="150" alt="GUI"/><br/>
+
+## 判斷結果呈現
+
+<img src="https://i.imgur.com/LuGCAhy.jpg" width="700" height="300" alt="output"/><br/>
+
+畫面上顯示預測結果，以及目標帳號的資訊。
 
 # Authors
+
 Ying Hsuan Chen 陳映璇
 
 I Chieh Yang 楊沂潔
 
-## References
+# References
+
+https://www.kaggle.com/code/khoingo16/predicting-a-fake-instagram-account/notebook
