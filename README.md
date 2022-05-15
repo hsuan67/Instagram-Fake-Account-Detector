@@ -24,7 +24,7 @@
 # 機器學習模型
 
 ## Features
-<img src="https://user-images.githubusercontent.com/86561823/168461642-cc3ea2c1-be1e-4c4e-8412-9265805545e6.png" width="250" height="150" alt="微信小程式"/><br/>
+<img src="https://user-images.githubusercontent.com/86561823/168461642-cc3ea2c1-be1e-4c4e-8412-9265805545e6.png" width="230" height="130" alt="微信小程式"/><br/>
 <!-- ![image](https://user-images.githubusercontent.com/86561823/168461642-cc3ea2c1-be1e-4c4e-8412-9265805545e6.png) -->
 選擇不論帳號公開與否皆可取得之公開資訊。
 
