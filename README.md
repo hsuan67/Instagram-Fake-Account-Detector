@@ -24,9 +24,9 @@
 # 機器學習模型
 
 ## Features
-<img src="![image](https://i.imgur.com/SHae8rJ.jpg)" width="200" height="200" alt="Features"/><br/>
 
-<!-- ![image](https://user-images.githubusercontent.com/86561823/168461642-cc3ea2c1-be1e-4c4e-8412-9265805545e6.png) -->
+<img src="https://i.imgur.com/SHae8rJ.jpg" width="300" height="150" alt="Features"/><br/>
+
 選擇不論帳號公開與否皆可取得之公開資訊。
 
 * Username
