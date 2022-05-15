@@ -55,7 +55,7 @@
 
 1. Cross Validation → 選出最優模型
 
-  <img src="https://i.imgur.com/GUGUtcY.png" width="150" height="150" alt="Model"/><br/>
+  * <img src="https://i.imgur.com/GUGUtcY.png" width="150" height="150" alt="Model"/><br/>
 
 2. Random Search → 選出最優參數
 
