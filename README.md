@@ -9,6 +9,7 @@
 3. 使用者介面
 
 # Required Python libraries
+
 * numpy
 * pandas
 * sklearn
@@ -21,10 +22,28 @@
 * gunicorn
 
 # 機器學習模型
-## features
-## training
-* cross validation
-* random search
+
+## Features
+
+![image](https://user-images.githubusercontent.com/86561823/168461453-414e9e23-646a-48cc-ab37-385c843faf9e.png)
+
+選擇不論帳號公開與否皆可取得之公開資訊。
+
+* Username
+* Fullname
+* Biography word numbers
+* Post numbers
+* Follower numbers
+* Followee numbers
+* Have profile picture or not
+* Have URL or not
+* Private or not
+
+## Training
+
+1. Cross Validation
+2. Random Search
+
 ## result
 
 # 爬蟲獲取資料
