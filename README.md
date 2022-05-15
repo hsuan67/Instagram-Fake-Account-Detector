@@ -56,10 +56,18 @@
 1. Cross Validation → 選出最優模型
 
    <img src="https://i.imgur.com/GUGUtcY.png" width="180" height="150" alt="Model"/><br/>
+   
+   RandomForestClassifier 結果最佳，因此後續採用此模型進行訓練。
 
 2. Random Search → 選出最優參數
 
 ## result
+
+<img src="https://i.imgur.com/DStPPG1.png" width="180" height="150" alt="Model"/><br/>
+
+accuracy: 0.933333
+precision: 0.933333
+recall: 0.933333
 
 # 爬蟲獲取資料
 instaloader 抓取目標帳號的資料，作為系統判斷的feature
