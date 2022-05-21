@@ -23,12 +23,7 @@ def submit():
 @app.route('/success/<action>/<name>')
 def success(name,action):
     numList = ['0','1','2','3','4','5','6','7','8','9']
-    # profile_list = [['profile pic', 'nums/length username', 'fullname words', 
-    #                   'nums/length fullname', 'discription length', 'external URL', 
-    #                   'private', '#posts', '#followers', '#follows'],[]]
-
     profile_list = []
-
     appInfo = {  # dict
         'result':0,
         'bool_pic': 0,
@@ -52,7 +47,6 @@ def success(name,action):
     appInfo['username'] = name
 
     #profile_image
-
     pic = profile.profile_pic_url
     if "44884218_345707102882519_2446069589734326272_n.jpg?" in pic:
         bool_pic = 0
@@ -70,7 +64,6 @@ def success(name,action):
 
     digit_username = counter1 / len(name)
     profile_list.append(digit_username)
-
 
     #len(fullname)
     fullname = profile.full_name
@@ -90,7 +83,7 @@ def success(name,action):
 
     profile_list.append(digit_fullname)
 
-    #自介
+    #biography
     biography = profile.biography
     profile_list.append(len(biography))
     appInfo['biography'] = len(biography)
@@ -114,17 +107,17 @@ def success(name,action):
         appInfo['private'] = "No"
     profile_list.append(private)
 
-    #貼文數
+    #post_count
     post_count = profile.get_posts().count
     profile_list.append(post_count)
     appInfo['post_count'] = post_count
 
-    #追蹤數
+    #followers
     followers = profile.followers
     profile_list.append(followers)
     appInfo['followers'] = followers
 
-    #follows
+    #followees
     followees = profile.followees
     profile_list.append(followees)
     appInfo['followees'] = followees
