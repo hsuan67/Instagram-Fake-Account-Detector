@@ -4,13 +4,6 @@
 
 以下為系統網址：https://python-alison.herokuapp.com/
 
-
-此程式分為三個部分：
-
-1. 機器學習模型
-2. 爬蟲獲取資料
-3. 使用者介面
-
 # Required Python libraries
 
 * numpy
@@ -24,9 +17,29 @@
 * flask
 * gunicorn
 
-# 機器學習模型
+# How to use
 
-## Features
+## 模型
+
+<img src="https://i.imgur.com/SEcFJzX.jpg" width="400" height="230" alt="Model_use"/><br/>
+
+欲執行 model.py，於螢光劃記處更改路徑即可，或直接使用訓練好的 Random_model。
+
+## 爬蟲 + 使用者介面
+
+欲執行 app.py，需將 templates (內含 form.html, page.html) 放在同個資料夾。
+
+# Introduction
+
+此程式分為三個部分：
+
+1. 機器學習模型
+2. 爬蟲獲取資料
+3. 使用者介面
+
+## 機器學習模型
+
+### Features
 
 選擇不論帳號公開與否皆可取得之公開資訊：
 
@@ -54,7 +67,7 @@
 
 * **Number of Followees**: How many followees does the user have?
 
-## Training
+### Training
 
 1. Cross Validation → 選出最優模型
 
@@ -64,7 +77,7 @@
 
 2. Random Search → 選出最優參數
 
-## result
+### result
 
 accuracy: 0.933333
 
@@ -74,17 +87,17 @@ recall: 0.933333
 
 <img src="https://i.imgur.com/DStPPG1.png" width="300" height="250" alt="Result"/><br/>
 
-# 爬蟲獲取資料
+## 爬蟲獲取資料
 
 Instaloader 爬取模型所需之特徵（欲查詢帳號的資訊），交由模型預測。
 
-# 使用者介面
+## 使用者介面
 
-## 初始畫面
+### 初始畫面
 
 <img src="https://i.imgur.com/iICVKNj.png" width="270" height="150" alt="GUI"/><br/>
 
-## 判斷結果呈現
+### 判斷結果呈現
 
 <img src="https://i.imgur.com/LuGCAhy.jpg" width="700" height="300" alt="output"/><br/>
 
