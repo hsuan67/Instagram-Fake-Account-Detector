@@ -123,7 +123,7 @@ model_params = {
     'max_features': randint(1, 7),
 }
 
-random = RandomizedSearchCV(model, model_params, n_iter=100, cv=7, random_state=1, verbose=1)
+random = RandomizedSearchCV(model, model_params, n_iter=10, cv=5, random_state=1, verbose=2)
 result = random.fit(X_train, y_train)
 # print('Best Score: %s' % result.best_score_)
 # print('Best Hyperparameters: %s' % result.best_params_)
@@ -137,10 +137,10 @@ X_final, y_final = load_test_data()
 
 y_pred = pipeline.predict(X_final)
 
-print("accuracy: %f" % (metrics.accuracy_score(y_test, y_pred > .5)))
-print("precision: %f" % (metrics.precision_score(y_test, y_pred > .5)))
-print("recall: %f" % (metrics.recall_score(y_test, y_pred > .5)))
-plot_roc_curve(y_test.flatten(), y_pred.flatten())
+print("accuracy: %f" % (metrics.accuracy_score(y_final, y_pred > .5)))
+print("precision: %f" % (metrics.precision_score(y_final, y_pred > .5)))
+print("recall: %f" % (metrics.recall_score(y_final, y_pred > .5)))
+plot_roc_curve(y_final.flatten(), y_pred.flatten())
 
 labels = ["genuine", "fake"]
 title = "Predicting Fake Instagram Account"
