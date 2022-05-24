@@ -123,7 +123,7 @@ model_params = {
     'max_features': randint(1, 7),
 }
 
-random = RandomizedSearchCV(model, model_params, n_iter=100, cv=7, random_state=1)
+random = RandomizedSearchCV(model, model_params, n_iter=100, cv=7, random_state=1, verbose=1)
 result = random.fit(X_train, y_train)
 # print('Best Score: %s' % result.best_score_)
 # print('Best Hyperparameters: %s' % result.best_params_)
