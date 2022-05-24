@@ -1,4 +1,4 @@
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, plot_roc_curve
 from sklearn.model_selection import cross_validate
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -53,41 +53,6 @@ def plot_confusion_matrix(y_actual, y_pred, labels, title=''):
     ax.set_xlabel("predicted values")
     ax.set_ylabel("actual values")
 
-def plot_roc_curve(y_test, y_prob):
-    y_test = y_test.tolist()
-    y_prob = y_prob.tolist()
-    tmp_y_prob = []
-    tmp_y_prob = sorted(y_prob, key=float, reverse=True)
-    count_1 = 0
-    count_0 = 0
-    TP = 0
-    FP = 0
-    tpr = []
-    fpr = []
-    sort_y_prob = []
-    for i in range(0, len(y_prob), 1):
-        sort_y_prob.append(y_test[y_prob.index(tmp_y_prob[i])])
-    count_1 = sort_y_prob.count(1)
-    count_0 = sort_y_prob.count(0)
-
-    for i in range(len(sort_y_prob)):
-        if sort_y_prob[i] == 1:
-            TP += 1
-            tpr.append(TP/count_1)
-            fpr.append(FP/count_0)
-        else :
-            FP += 1
-            tpr.append(TP/count_1)
-            fpr.append(FP/count_0)
-    
-    plt.plot(fpr, tpr)
-    plt.xlabel("FPR")
-    plt.ylabel("TPR")
-    plt.xlim(0,1)
-    plt.ylim(0,1)
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig("roc_curve.png")
-
 X_data, y_data = load_train_data()
 
 X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.2, random_state=37)
@@ -140,7 +105,8 @@ y_pred = pipeline.predict(X_final)
 print("accuracy: %f" % (metrics.accuracy_score(y_final, y_pred > .5)))
 print("precision: %f" % (metrics.precision_score(y_final, y_pred > .5)))
 print("recall: %f" % (metrics.recall_score(y_final, y_pred > .5)))
-plot_roc_curve(y_final.flatten(), y_pred.flatten())
+plot_roc_curve(pipeline, X_final, y_final)
+plt.savefig("roc_curve.png")
 
 labels = ["genuine", "fake"]
 title = "Predicting Fake Instagram Account"
