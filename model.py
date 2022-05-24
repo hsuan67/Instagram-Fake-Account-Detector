@@ -1,4 +1,4 @@
-from sklearn.metrics import confusion_matrix, plot_roc_curve
+from sklearn.metrics import confusion_matrix, roc_curve, auc, RocCurveDisplay
 from sklearn.model_selection import cross_validate
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -100,14 +100,17 @@ joblib.dump(pipeline, 'Random_model')
 X_final, y_final = load_test_data()
 # print("Test score: {:.3f}".format(pipeline.score(X_final, y_final)))
 
-y_pred = pipeline.predict(X_final)
+y_pred = pipeline.predict_proba(X_final)[:,1]
 
 print("accuracy: %f" % (metrics.accuracy_score(y_final, y_pred > .5)))
 print("precision: %f" % (metrics.precision_score(y_final, y_pred > .5)))
 print("recall: %f" % (metrics.recall_score(y_final, y_pred > .5)))
-plot_roc_curve(pipeline, X_final, y_final)
+fpr, tpr, thresholds = roc_curve(y_final, y_pred)
+roc_auc = auc(fpr, tpr)
+display = metrics.RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc)
+display.plot()
 plt.savefig("roc_curve.png")
 
 labels = ["genuine", "fake"]
 title = "Predicting Fake Instagram Account"
-plot_confusion_matrix(y_final, y_pred, labels, title)
+plot_confusion_matrix(y_final, y_pred > .5, labels, title)
