@@ -1,4 +1,4 @@
-from sklearn.metrics import confusion_matrix, roc_curve, auc, RocCurveDisplay
+from sklearn.metrics import confusion_matrix, roc_curve, auc, RocCurveDisplay, precision_recall_curve, PrecisionRecallDisplay
 from sklearn.model_selection import cross_validate
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -41,17 +41,23 @@ def get_classifier_cv_score(model, X, y, scoring='accuracy', cv=7):
     
     return train_mean, val_mean
 
-def plot_confusion_matrix(y_actual, y_pred, labels, title=''):
-    data = confusion_matrix(y_actual, y_pred)
-    ax = sns.heatmap(data,
-                     annot=True,
-                     cbar=False,
-                     fmt='d',
-                     xticklabels = labels,
-                     yticklabels = labels)
-    ax.set_title(title)
-    ax.set_xlabel("predicted values")
-    ax.set_ylabel("actual values")
+
+def save_roc_curve(y_final, y_pred, roc_curve_filename):
+    fpr, tpr, thresholds = roc_curve(y_final, y_pred)
+    roc_auc = auc(fpr, tpr)
+    display = RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc)
+    display.plot()
+    print("Saving roc curve to '%s'" % (roc_curve_filename))
+    plt.savefig(roc_curve_filename)
+
+
+def save_pr_curve(y_final, y_pred, pr_curve_filename):
+    precision, recall, thresholds = precision_recall_curve(y_final, y_pred)
+    display = PrecisionRecallDisplay(precision=precision, recall=recall)
+    display.plot()
+    print("Saving pr curve to '%s'" % (pr_curve_filename))
+    plt.savefig(pr_curve_filename)
+
 
 X_data, y_data = load_train_data()
 
@@ -105,12 +111,7 @@ y_pred = pipeline.predict_proba(X_final)[:,1]
 print("accuracy: %f" % (metrics.accuracy_score(y_final, y_pred > .5)))
 print("precision: %f" % (metrics.precision_score(y_final, y_pred > .5)))
 print("recall: %f" % (metrics.recall_score(y_final, y_pred > .5)))
-fpr, tpr, thresholds = roc_curve(y_final, y_pred)
-roc_auc = auc(fpr, tpr)
-display = metrics.RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc)
-display.plot()
-plt.savefig("roc_curve.png")
+print('Confusion matrix:\n', confusion_matrix(y_final, y_pred > .5))
+save_roc_curve(y_final, y_pred, "roc_curve.png")
+save_pr_curve(y_final, y_pred, "pr_curve.png")
 
-labels = ["genuine", "fake"]
-title = "Predicting Fake Instagram Account"
-plot_confusion_matrix(y_final, y_pred > .5, labels, title)
