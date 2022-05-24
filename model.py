@@ -16,7 +16,7 @@ import seaborn as sns
 import joblib
 
 def load_train_data():
-    train_data = pd.read_csv('C:/Users/alison/Desktop/flask/train.csv', header=0)
+    train_data = pd.read_csv('./train.csv', header=0)
 
     X_train = train_data.drop(columns='fake')
     y_train = train_data['fake']
@@ -24,7 +24,7 @@ def load_train_data():
     return X_train, y_train
 
 def load_test_data():
-    test_data = pd.read_csv('C:/Users/alison/Desktop/flask/test.csv', header=0)
+    test_data = pd.read_csv('./test.csv', header=0)
 
     X_test = test_data.drop(columns='fake')
     y_test = test_data['fake']
