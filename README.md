@@ -80,7 +80,7 @@ recall: 0.916667
 
 confusion matrix:
 [[55 5]
-[ 5 55]]
+[5 55]]
 
 <img src="https://i.imgur.com/FOWezLR.jpg" width="300" height="250" alt="Result"/><br/>
 
