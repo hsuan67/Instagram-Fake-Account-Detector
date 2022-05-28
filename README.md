@@ -4,20 +4,13 @@
 
 以下為系統網址：https://python-alison.herokuapp.com/
 
-# Required Python libraries
+# Install the required Python libraries by (tested under Python 3.10.4)
 
-* numpy
-* pandas
-* sklearn
-* scipy
-* seaborn
-* matplotlib
-* joblib
-* instaloader
-* flask
-* gunicorn
+```
+pip install -r requirements.txt
+```
 
-# How to use
+# How to use/run the code
 
 ## 模型
 
