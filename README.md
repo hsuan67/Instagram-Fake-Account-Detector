@@ -72,13 +72,17 @@ pip install -r requirements.txt
 
 ### result
 
-accuracy: 0.933333
+accuracy: 0.916667
 
-precision: 0.933333
+precision: 0.916667
 
-recall: 0.933333
+recall: 0.916667
 
-<img src="https://i.imgur.com/DStPPG1.png" width="300" height="250" alt="Result"/><br/>
+confusion matrix:
+[[55 5]
+[ 5 55]]
+
+<img src="https://i.imgur.com/FOWezLR.jpg" width="300" height="250" alt="Result"/><br/>
 
 ## 爬蟲獲取資料
 
