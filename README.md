@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## 模型
 
-<img src="https://i.imgur.com/3wmLYEQ.jpg" width="400" height="230" alt="Model_use"/><br/>
+<img src="https://i.imgur.com/3wmLYEQ.jpg" width="280" height="250" alt="Model_use"/><br/>
 
 欲執行 model.py，於螢光劃記處更改路徑即可，或直接使用訓練好的 Random_model。
 
