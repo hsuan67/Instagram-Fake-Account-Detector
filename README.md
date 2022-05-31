@@ -100,6 +100,11 @@ Instaloader 爬取模型所需之特徵（欲查詢帳號的資訊），交由�
 
 畫面上顯示預測結果，以及目標帳號的資訊。
 
+
+<img src="https://i.imgur.com/7F1zgF8.jpg" width="200" height="50" alt="output"/><br/>
+
+若輸入無效帳號，則會顯示帳號不存在。
+
 # Authors
 
 Ying Hsuan Chen 陳映璇
