@@ -72,15 +72,15 @@ pip install -r requirements.txt
 
 ### result
 
-accuracy: 0.916667
+accuracy: 0.925000
 
-precision: 0.916667
+precision: 0.932203
 
 recall: 0.916667
 
 confusion matrix:
-[[55 5]
-[5 55]]
+ [[56  4]
+ [ 5 55]]
 
 <img src="https://i.imgur.com/FOWezLR.jpg" width="300" height="250" alt="Result"/><br/>
 
