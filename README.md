@@ -79,8 +79,8 @@ precision: 0.932203
 recall: 0.916667
 
 confusion matrix:
- [[56  4]
- [ 5 55]]
+ [[55  4]
+ [ 5 56]]
 
 <img src="https://i.imgur.com/FOWezLR.jpg" width="300" height="250" alt="Result"/><br/>
 
